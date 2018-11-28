@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".activity.TambahPostinganActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Judul"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/tambahPostinganJudul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jenis Coklat"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/tambahPostinganJenisCoklat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alamat"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/tambahPostinganAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Harga Coklat"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/tambahPostinganHarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/tambahPostinganImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/tambahPostinganTambahFoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ambil Gambar"
+                android:textColor="@color/colorPrimary"/>
+            <Button
+                android:id="@+id/tambahPostinganTambah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tambah"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

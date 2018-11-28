@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.EditPostinganActivity"
+    android:padding="10dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Judul"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/editPostinganJudul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jenis Coklat"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/editPostinganJenisCoklat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alamat"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/editPostinganAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Harga Coklat"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/editPostinganHarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/editPostinganImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                />
+            <Button
+                android:id="@+id/editPostinganTambahFoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ganti foto"
+                android:textColor="@color/colorPrimary"/>
+            <Button
+                android:id="@+id/editPostinganTambah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simpan"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

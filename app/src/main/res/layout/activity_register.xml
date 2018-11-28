@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".activity.RegisterActivity"
+    android:layout_gravity="center"
+    android:gravity="center">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/registerEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/registerUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/registerNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/registerPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tulis Ulang Password"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/registerKonfirmasiPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Lahir"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/resgisterTanggalLahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kelamin"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <Spinner
+                android:id="@+id/registerJenisKelamin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/jenis_kelamin"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nomor Telepon"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/registerNomorTelepon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+            <Button
+                android:id="@+id/registerDaftar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Daftar"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
