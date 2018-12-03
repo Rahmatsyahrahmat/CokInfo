@@ -103,7 +103,9 @@ public class TambahPostinganActivity extends AppCompatActivity implements View.O
         Toast.makeText(this,s,Toast.LENGTH_SHORT).show();
     }
     private void upload(){
-        cekInput();
+        if (!cekInput()){
+            return;
+        }
         progressDialog.show();
         databaseReference.child("Postingan").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -133,27 +135,28 @@ public class TambahPostinganActivity extends AppCompatActivity implements View.O
             }
         });
     }
-    private void cekInput(){
+    private boolean cekInput(){
         if (isNull(judul)){
             toast("Judul tidak boleh kosong");
-            return;
+            return false;
         }
         if (isNull(jenisCoklt)){
             toast("Jenis Coklat tidak boleh kosong");
-            return;
+            return false;
         }
         if (isNull(alamat)){
             toast("Alamat tidak boleh kosong");
-            return;
+            return false;
         }
         if (isNull(harga)){
             toast("Harga tidak boleh kosong");
-            return;
+            return false;
         }
         if (bitmap==null){
             toast("Ambil gambar terlebih dahulu");
-            return;
+            return false;
         }
+        return true;
     }
     private boolean isNull(EditText et){
         return TextUtils.isEmpty(et.getText().toString().trim());

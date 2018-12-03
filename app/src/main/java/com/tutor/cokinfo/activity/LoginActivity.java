@@ -62,7 +62,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         regster.setOnClickListener(this);
     }
     private void login(){
-        cekInput();
+        if (!cekInput()){
+            return;
+        }
         progressDialog.show();
         firebaseAuth.signInWithEmailAndPassword(email.getText().toString(),password.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
@@ -82,14 +84,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
         });
     }
-    private void cekInput(){
+    private boolean cekInput(){
         if (isNull(email)){
             toast("Email tidak boleh kosong");
-            return;
+            return false;
         }
         if (isNull(password)){
             toast("Password tidak boleh kosong");
-            return;
+            return false;
         }
         Admin admin = new Admin();
         if (email.getText().toString().equals(admin.getEmail())&&password.getText().toString().equals(admin.getPassword())){
@@ -97,8 +99,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             editor.putString("isAdmin","true");
             editor.apply();
             startActivity(new Intent(this,AdminMainActivity.class));
-            return;
+            return false;
         }
+        return true;
+
     }
     private void toast(String s){
         Toast.makeText(this,s,Toast.LENGTH_SHORT).show();
